@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+  <html lang="en">
+    <head>
+    <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Taking Back Control - Linux Presentation</title>
+        
+        <style>
+        body {
+          margin: 0;
+          padding: 0;
+          font-family: "Segoe UI", Roboto, Arial, sans-serif;
+          background: #111;
+            color: #eee;
+            display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 100vh;
+          overflow: hidden;
+        }
+      
+      .slide {
+        display: none;
+        max-width: 900px;
+        padding: 40px;
+        box-sizing: border-box;
+        text-align: left;
+        animation: fade 0.4s ease;
+      }
+      
+      @keyframes fade {
+        from { opacity: 0; transform: translateY(10px); }
+        to   { opacity: 1; transform: translateY(0); }
+      }
+      
+      .slide.active {
+        display: block;
+      }
+      
+      h1, h2, h3 {
+        margin-top: 0;
+        color: #58a6ff;
+      }
+      
+      .nav {
+        position: fixed;
+        bottom: 20px;
+        width: 100%;
+        text-align: center;
+        z-index: 10;
+      }
+      
+      button {
+        background: #222;
+          color: #eee;
+          border: 1px solid #555;
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        margin: 0 10px;
+        border-radius: 6px;
+        transition: background 0.2s;
+      }
+      
+      button:hover {
+        background: #333;
+      }
+      
+      #progress {
+      position: fixed;
+      top: 10px;
+      right: 20px;
+      color: #aaa;
+        font-size: 14px;
+      font-family: monospace;
+      }
+
+ul {
+  padding-left: 20px;
+  line-height: 1.6em;
+}
+
+pre {
+  white-space: pre-wrap;
+  line-height: 1.6em;
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid #333;
+  margin: 25px 0;
+}
+</style>
+  </head>
+  
+  <body>
+  
+  <div id="progress"></div>
+  
+  <!-- ================= SLIDES ================= -->
+  
+  <div class="slide active">
+  <h1>Taking Back Control: Why Linux is the Future</h1>
+  <h3>From Corporate Surveillance to Personal Sovereignty</h3>
+  <p><strong>Presenter:</strong> [Your Name]</p>
+  <p><em>"Your computer should serve you, not spy on you"</em></p>
+  </div>
+  
+  <div class="slide">
+  <h2>The Windows Problem - A Personal Story</h2>
+  <ul>
+  <li>Early morning forced reboots</li>
+  <li>Lost work, closed applications</li>
+  <li>No explanation, no transparency</li>
+  <li>The feeling: "Who really controls my machine?"</li>
+  </ul>
+  <p><em>Image: Windows Update screen, event viewer confusion</em></p>
+  </div>
+  
+  <div class="slide">
+  <h2>What Windows Actually Is (2025 Edition)</h2>
+  <ul>
+  <li>Windows as a Service - not software you own</li>
+  <li>Mandatory telemetry (diagnostic data collection)</li>
+  <li>Forced updates (security theater or control mechanism?)</li>
+  <li><strong>You're not the administrator - Microsoft is</strong></li>
+    </ul>
+    <p><em>"Updates will be automatically downloaded and installed"</em></p>
+</div>
+
+<div class="slide">
+    <h2>The Opaque Update System</h2>
+    <h3>What we know:</h3>
+    <ul>
+        <li>Restarts happen without clear warning</li>
+        <li>No detailed changelogs</li>
+        <li>Can't easily postpone indefinitely</li>
+  </ul>
+  
+  <h3>What we don't know:</h3>
+    <ul>
+        <li>What exactly changed in each update</li>
+        <li>What data is being collected</li>
+        <li>What "security improvements" actually mean</li>
+    </ul>
+
+    <p><em>Analogy: Getting locked out of your house while cleaners rearrange everything</em></p>
+</div>
+
+<div class="slide">
+    <h2>The Security Paradox</h2>
+    <ul>
+        <li>Claim: "We restart for your security"</li>
+        <li>Reality: Forced restarts cause data loss → security risk</li>
+        <li>True security = transparency + user control</li>
+        <li>Windows: Opaque processes running as SYSTEM</li>
+    </ul>
+    <p><strong>Question:</strong> If it looks like malware (forced actions, no transparency)...?</p>
+</div>
+
+<div class="slide">
+    <h2>Historical Context - PRISM &amp; Beyond</h2>
+    <ul>
+        <li>2013: PRISM revelations - Microsoft first to join NSA program</li>
+        <li>Documents showed direct access to Microsoft servers</li>
+        <li>2025: Windows 11 with mandatory Microsoft account</li>
+        <li>Parallel: Cloud-first, data collection, "telemetry"</li>
+    </ul>
+    <p><strong>Question:</strong> When does "convenience" become "surveillance"?</p>
+</div>
+
+<div class="slide">
+    <h2>The Business Model Shift</h2>
+    <ul>
+        <li>Old model: Sell software licenses</li>
+        <li>New model: Collect data, sell services</li>
+        <li>Windows 11: Pushes OneDrive, Microsoft 365, Edge</li>
+        <li>Telemetry: Can't be fully disabled in Home edition</li>
+  <li>Your usage patterns = their product</li>
+  </ul>
+  </div>
+  
+  <div class="slide">
+  <h2>Enter Linux - Philosophy First</h2>
+  <p>Core principle: <strong>User sovereignty</strong></p>
+  <p>Four freedoms:</p>
+  <ul>
+  <li>Run the program for any purpose</li>
+  <li>Study how it works (access to source code)</li>
+  <li>Redistribute copies</li>
+  <li>Distribute modified versions</li>
+  </ul>
+  <p><strong>Contrast:</strong> Windows EULA vs. GPL</p>
+  </div>
+  
+  <div class="slide">
+  <h2>Linux Transparency - No More Black Boxes</h2>
+  <ul>
+  <li>Everything is open source - inspectable</li>
+  <li>Logs are detailed and accessible</li>
+  <li>Updates happen WHEN YOU SAY</li>
+  <li>No telemetry by default</li>
+  </ul>
+  <p><em>Example: journalctl -xe vs. Windows Event Viewer maze</em></p>
+  </div>
+  
+  <div class="slide">
+  <h2>The Control Spectrum</h2>
+  <pre>
+  Windows 11                 Linux (Any Distribution)
+─────────────────────────────────────────────────────
+Forced Updates      ←→     Updates When You Choose
+Opaque Processes    ←→     Everything Logged/Visible
+Telemetry Default   ←→     No Telemetry By Default
+Corporate Control   ←→     User Control
+Restarts You        ←→     You Restart It
+</pre>
+  </div>
+  
+  <div class="slide">
+  <h2>Practical Benefits Today</h2>
+  <ul>
+  <li>No forced reboots - ever</li>
+  <li>Lightweight - runs on old hardware</li>
+  <li>Free - no licenses, subscriptions</li>
+  <li>Customizable - make it work YOUR way</li>
+  <li>Secure - transparency = actual security</li>
+  <li>Private - your data stays yours</li>
+  </ul>
+  </div>
+  
+  <div class="slide">
+  <h2>Common Myths Debunked</h2>
+  <ul>
+  <li>"It's too hard" → Mint/Zorin are easier than Windows 11</li>
+  <li>"No software" → 60,000+ free applications</li>
+  <li>"No games" → Steam Proton runs most Windows games</li>
+  <li>"No support" → Largest community in computing</li>
+  <li>"For geeks only" → My grandmother uses Linux Mint</li>
+  </ul>
+  </div>
+  
+  <div class="slide">
+  <h2>The Switch is Easier Than Ever</h2>
+  <ul>
+  <li>Test drive: USB boot (no installation)</li>
+  <li>Dual boot: Keep Windows for specific needs</li>
+  <li>Full switch: When ready</li>
+  <li>Modern distros: Mint, Ubuntu, Pop!_OS - "just work"</li>
+  <li>Hardware: Most works out-of-box</li>
+  </ul>
+  </div>
+  
+  <div class="slide">
+  <h2>What You Gain Beyond Control</h2>
+  <ul>
+  <li>Learning: Understanding how computers actually work</li>
+  <li>Community: Help from passionate users</li>
+  <li>Future-proofing: Linux runs the internet</li>
+  <li>Ethical: Supporting software freedom</li>
+  <li>Psychological: Ending the adversarial relationship with your tool</li>
+  </ul>
+  </div>
+  
+  <div class="slide">
+  <h2>The Bigger Picture</h2>
+  <ul>
+  <li>Digital autonomy in an increasingly controlled world</li>
+  <li>Right to repair extends to software</li>
+  <li>Local-first computing vs. cloud dependence</li>
+  <li>Teaching transparent technology to the next generation</li>
+  </ul>
+  <p><em>"The most secure computer is the one you control completely"</em></p>
+  </div>
+  
+  <div class="slide">
+  <h2>First Steps - Right Now</h2>
+  <ul>
+  <li>Download Linux Mint ISO</li>
+  <li>Create persistent USB (20 minutes)</li>
+  <li>Boot from it (risk-free)</li>
+  <li>Use for a week alongside Windows</li>
+  <li>Decide what works for you</li>
+  </ul>
+  </div>
+  
+  <div class="slide">
+  <h2>Resources &amp; Getting Help</h2>
+  <ul>
+  <li>Distros: Linux Mint, Zorin OS, Pop!_OS</li>
+  <li>Communities: Reddit r/linux4noobs, Ubuntu Forums</li>
+  <li>Learning: Linux Journey, Ubuntu Tutorials</li>
+  </ul>
+  </div>
+  
+  <div class="slide">
+  <h2>Final Thought</h2>
+  <pre>
+  "We used to own our tools.
+We used to understand our tools.
+We used to control our tools.
+With Linux, we still can."
+</pre>
+  </div>
+  
+  <!-- ================= NAVIGATION ================= -->
+  
+  <div class="nav">
+  <button onclick="prevSlide()">◀ Previous</button>
+  <button onclick="nextSlide()">Next ▶</button>
+  </div>
+  
+  <script>
+  let current = 0;
+const slides = document.querySelectorAll('.slide');
+const progress = document.getElementById("progress");
+
+function update() {
+  slides.forEach(s => s.classList.remove('active'));
+  slides[current].classList.add('active');
+  progress.textContent = "Slide " + (current + 1) + " / " + slides.length;
+}
+
+function nextSlide() {
+  if (current < slides.length - 1) {
+    current++;
+    update();
+  }
+}
+
+function prevSlide() {
+  if (current > 0) {
+    current--;
+    update();
+  }
+}
+
+document.addEventListener("keydown", e => {
+  if (e.key === "ArrowRight") nextSlide();
+  if (e.key === "ArrowLeft") prevSlide();
+});
+
+update();
+</script>
+  
+  </body>
+  </html>
+  
